@@ -1,9 +1,39 @@
 import 'tailwindcss/tailwind.css';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function App({ Component, pageProps }) {
     return (
         <div dir="rtl">
+            <Head>
+                <title>RTL Markdown Editor</title>
+                <link href="https://rtl-markdown-editor.vercel.app" hrefLang="ar" rel="alternate" />
+                <meta content="markdown editor for rtl language" name="keywords" />
+                <meta content="moath.dev" name="author" />
+                <meta content="index, follow" name="robots" />
+                <meta charSet="utf-8" />
+                <meta content="RTL Markdown Editor" property="og:site_name" />
+                <meta content="https://rtl-markdown-editor.vercel.app" property="og:url" />
+                <meta content="ar-SA" property="og:locale" />
+                <meta content="website" property="og:type" />
+                <meta content="summary_large_image" name="twitter:card" />
+                <meta content="https://rtl-markdown-editor.vercel.app" name="twitter:site" />
+                <meta content="@dev_moath" name="twitter:creator" />
+                <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+                <link rel="icon" type="image/png" href="/favicon.png" />
+                <meta name="title" content="RTL Markdown Editor" />
+                <meta name="description" content="markdown editor for rtl language" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://rtl-markdown-editor.vercel.app/" />
+                <meta property="og:title" content="RTL Markdown Editor" />
+                <meta property="og:description" content="markdown editor for rtl language" />
+                <meta property="og:image" content="https://rtl-markdown-editor.vercel.app/favicon.svg" />
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://rtl-markdown-editor.vercel.app/" />
+                <meta property="twitter:title" content="RTL Markdown Editor" />
+                <meta property="twitter:description" content="markdown editor for rtl language" />
+                <meta property="twitter:image" content="https://rtl-markdown-editor.vercel.app/favicon.svg" />
+            </Head>
             <div className="navbar mb-2 shadow-lg bg-base-200">
                 <div className="flex-1">
                     <Link href="/">
