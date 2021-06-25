@@ -33,6 +33,10 @@ export default function App({ Component, pageProps }) {
                 <meta property="twitter:title" content="RTL Markdown Editor" />
                 <meta property="twitter:description" content="markdown editor for rtl language" />
                 <meta property="twitter:image" content="https://rtl-markdown-editor.vercel.app/favicon.svg" />
+                <meta content="RTL Markdown Editor" itemProp="name" />
+                <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport" />
+                <meta name="apple-mobile-web-app-title" content="RTL Markdown Editor" />
+                <meta name="application-name" content="RTL Markdown Editor" />
             </Head>
             <div className="navbar shadow-lg bg-base-200">
                 <div className="flex-1">

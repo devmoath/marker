@@ -77,9 +77,9 @@ export default function Home() {
     };
 
     return (
-        <div className="grid lg:grid-cols-1 lg:grid-cols-10 lg:gap-4 min-h-screen">
+        <div className="grid grid-cols-1 lg:grid-cols-10 lg:gap-4 min-h-screen">
             <div className="col-span-5 card rounded-none">
-                <div className="w-full px-1">
+                <div className="px-1">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text" />
@@ -94,8 +94,8 @@ export default function Home() {
                 </div>
             </div>
             <div className="col-span-5">
-                <div className="my-5 flex justify-center">
-                    <button className="btn mr-2" onClick={copyMarkdown}>
+                <div className="my-5 flex flex-wrap justify-center gap-4">
+                    <button className="btn" onClick={copyMarkdown}>
                         copy markdown
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@ export default function Home() {
                             <path d="M14 13l2 2l2 -2m-2 2v-6" />
                         </svg>
                     </button>
-                    <button className="btn btn-primary mr-2">
+                    <button className="btn btn-primary">
                         copy html
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +130,7 @@ export default function Home() {
                             <path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" />
                         </svg>
                     </button>
-                    <button className="btn btn-secondary mr-2" onClick={() => setValue('')}>
+                    <button className="btn btn-secondary" onClick={() => setValue('')}>
                         clear
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -148,9 +148,9 @@ export default function Home() {
                         </svg>
                     </button>
                 </div>
-                <div className="w-full card bg-base-300 min-h-screen">
+                <div className="card bg-base-300 min-h-screen">
                     <div
-                        className="prose prose-lg text-right w-full mx-auto my-10"
+                        className="prose text-right mx-5 lg:mx-auto my-10 break-words"
                         dangerouslySetInnerHTML={{ __html: markdown }}
                     />
                 </div>
