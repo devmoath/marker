@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }) {
                 <meta property="twitter:description" content="markdown editor for rtl language" />
                 <meta property="twitter:image" content="https://rtl-markdown-editor.vercel.app/favicon.svg" />
             </Head>
-            <div className="navbar mb-2 shadow-lg bg-base-200">
+            <div className="navbar shadow-lg bg-base-200">
                 <div className="flex-1">
                     <Link href="/">
                         <a href="/" className="btn btn-ghost">
@@ -75,7 +75,7 @@ export default function App({ Component, pageProps }) {
                     </a>
                 </div>
             </div>
-            <div className="mx-3">
+            <div className="mx-3 my-5">
                 <Component {...pageProps} />
             </div>
         </div>
