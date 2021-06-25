@@ -76,6 +76,17 @@ export default function Home() {
         alert('Copied the text: ' + textarea.current.value);
     };
 
+    const copyHtml = () => {
+        const textField = document.createElement('textarea');
+        textField.innerText = markdown;
+        document.body.appendChild(textField);
+        textField.select();
+        document.execCommand('copy');
+        textField.remove();
+
+        alert('Copied the text: ' + markdown);
+    };
+
     return (
         <div className="grid grid-cols-1 lg:grid-cols-10 lg:gap-4 min-h-screen">
             <div className="col-span-5 card rounded-none">
@@ -113,7 +124,7 @@ export default function Home() {
                             <path d="M14 13l2 2l2 -2m-2 2v-6" />
                         </svg>
                     </button>
-                    <button className="btn btn-primary">
+                    <button className="btn btn-primary" onClick={copyHtml}>
                         copy html
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
