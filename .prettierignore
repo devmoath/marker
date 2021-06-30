@@ -1,10 +1,4 @@
 node_modules
-build
 .next
 package-lock.json
-*.min.*
-vendor
-composer.lock
-public
-storage
 .idea

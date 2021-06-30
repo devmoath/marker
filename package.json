@@ -1,12 +1,11 @@
 {
     "name": "rtl-markdown-editor",
     "version": "0.0.1",
-    "private": true,
     "scripts": {
-        "dev": "next dev",
         "build": "next build",
-        "start": "next start",
-        "fixer": "npx prettier --write ."
+        "dev": "next dev",
+        "fixer": "npx prettier --write .",
+        "start": "next start"
     },
     "dependencies": {
         "markdown-it": "^12.0.6",
@@ -15,13 +14,19 @@
         "react-dom": "^17.0.2"
     },
     "devDependencies": {
-        "node-ray": "^1.16.0",
         "@tailwindcss/typography": "^0.4.1",
         "autoprefixer": "^10.2.6",
         "daisyui": "^1.3.11",
+        "node-ray": "^1.16.0",
         "postcss": "^8.3.5",
         "prettier": "^2.3.1",
         "tailwindcss": "^2.2.4",
         "tailwindcss-flip": "^1.0.0"
+    },
+    "prettier": {
+        "printWidth": 120,
+        "singleQuote": true,
+        "tabWidth": 4,
+        "trailingComma": "es5"
     }
 }
