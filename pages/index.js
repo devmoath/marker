@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import MarkdownIt from 'markdown-it';
+import prettier from 'prettier';
+import parserMarkdown from 'prettier/parser-markdown';
 
 const parser = new MarkdownIt({
     html: true,
@@ -20,7 +22,7 @@ const defaultValue = `| وزن المادة | المتطلبات |
 
 > اقتباس
 
-<a name="نظرة-عامة"></a>
+<a name='نظرة-عامة'></a>
 
 ## [نظرة عامة](#نظرة-عامة)
 
@@ -33,7 +35,7 @@ const defaultValue = `| وزن المادة | المتطلبات |
 3. لغة \`SQL\` المستخدمة في قواعد البيانات
 4. الجبر
 
-<a name="مشروع-المادة"></a>
+<a name='مشروع-المادة'></a>
 
 ## [مشروع المادة](#مشروع-المادة)
 
@@ -44,14 +46,14 @@ const defaultValue = `| وزن المادة | المتطلبات |
    تربطة بقاعدة بيانات وتنفذ من خلاله اوامر \`SQL\`
 3. كتابة أوامر \`SQL\` معقدة
 
-<a name="نصائح-للمادة"></a>
+<a name='نصائح-للمادة'></a>
 
 ## [نصائح للمادة](#نصائح-للمادة)
 
 المادة تعتمد على الفهم بشكل كبير ولايوجد صعوبة كبيرة فيها وتعتبر مهمة لك كطالب نظم المعلومات سواء في مشروع التخرج او
 مابعد التخرج تحتاج فقط الاهتمام ومراجعة بسيطة
 
-<a name="مراجع-للمادة"></a>
+<a name='مراجع-للمادة'></a>
 
 ## [مراجع المادة](#مراجع-للمادة)
 
@@ -87,6 +89,19 @@ export default function Home() {
         textField.remove();
 
         alert('Copied the text: ' + markdown);
+    };
+
+    const format = () => {
+        const result = prettier.format(value, {
+            parser: 'markdown',
+            plugins: [parserMarkdown],
+            printWidth: 120,
+            singleQuote: true,
+            tabWidth: 4,
+            trailingComma: 'es5',
+        });
+
+        setValue(result);
     };
 
     return (
@@ -141,6 +156,23 @@ export default function Home() {
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
                             <path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" />
+                        </svg>
+                    </button>
+                    <button className="btn btn-accent" onClick={format}>
+                        format
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="w-8 h-8 mr-2"
+                            viewBox="0 0 24 24"
+                            strokeWidth="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 4a2 2 0 0 0 -2 2v3a2 3 0 0 1 -2 3a2 3 0 0 1 2 3v3a2 2 0 0 0 2 2" />
+                            <path d="M17 4a2 2 0 0 1 2 2v3a2 3 0 0 0 2 3a2 3 0 0 0 -2 3v3a2 2 0 0 1 -2 2" />
                         </svg>
                     </button>
                     <button className="btn btn-secondary" onClick={() => setValue('')}>
