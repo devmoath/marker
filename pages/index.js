@@ -18,6 +18,8 @@ const defaultValue = `| وزن المادة | المتطلبات |
 - [نصائح للمادة](#نصائح-للمادة)
 - [مراجع المادة](#مراجع-للمادة)
 
+> اقتباس
+
 <a name="نظرة-عامة"></a>
 
 ## [نظرة عامة](#نظرة-عامة)
@@ -110,7 +112,7 @@ export default function Home() {
                         copy markdown
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="w-8 h-8 ml-2"
+                            className="w-8 h-8 mr-2"
                             viewBox="0 0 24 24"
                             strokeWidth="1.5"
                             stroke="currentColor"
@@ -128,7 +130,7 @@ export default function Home() {
                         copy html
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="w-8 h-8 ml-2"
+                            className="w-8 h-8 mr-2"
                             viewBox="0 0 24 24"
                             strokeWidth="1.5"
                             stroke="currentColor"
@@ -145,7 +147,7 @@ export default function Home() {
                         clear
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="w-8 h-8 ml-2"
+                            className="w-8 h-8 mr-2"
                             viewBox="0 0 24 24"
                             strokeWidth="1.5"
                             stroke="currentColor"
