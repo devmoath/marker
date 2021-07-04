@@ -95,23 +95,8 @@ export default function Home() {
     };
 
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-10 lg:gap-4 min-h-screen">
-            <div className="col-span-5 card rounded-none">
-                <div className="px-1">
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text" />
-                        </label>
-                        <textarea
-                            className="textarea h-screen textarea-bordered"
-                            onChange={(e) => setValue(e.target.value)}
-                            value={value}
-                            ref={textarea}
-                        />
-                    </div>
-                </div>
-            </div>
-            <div className="col-span-5">
+        <div className="grid grid-cols-1 lg:grid-cols-10 gap-4 min-h-screen">
+            <div className="col-span-1 lg:col-span-10">
                 <div className="my-5 flex flex-wrap justify-center gap-4">
                     <button className="btn" onClick={copyMarkdown}>
                         copy markdown
@@ -183,6 +168,20 @@ export default function Home() {
                         </svg>
                     </button>
                 </div>
+            </div>
+            <div className="col-span-1 lg:col-span-5 card rounded-none">
+                <div className="px-1">
+                    <div className="form-control">
+                        <textarea
+                            className="textarea h-screen textarea-bordered"
+                            onChange={(e) => setValue(e.target.value)}
+                            value={value}
+                            ref={textarea}
+                        />
+                    </div>
+                </div>
+            </div>
+            <div className="col-span-1 lg:col-span-5">
                 <div className="card bg-base-300 min-h-screen">
                     <div
                         className="prose text-right mx-5 lg:mx-auto my-10 break-words"
