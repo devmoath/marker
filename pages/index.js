@@ -2,55 +2,13 @@ import { useEffect, useRef, useState } from 'react';
 import MarkdownIt from 'markdown-it';
 import prettier from 'prettier';
 import parserMarkdown from 'prettier/parser-markdown';
+import defaultValue from '@data/markdown';
 
 const parser = new MarkdownIt({
     html: false,
     linkify: true,
     typographer: true,
 });
-
-const defaultValue = `| وزن المادة | المتطلبات |
-|---|---|  
-| 3 ساعات | [\`عال 111\`](https://infosystems.blog/plan-study/course/CSC-111) [\`ريض 151\`](https://infosystems.blog/plan-study/course/MATH-151)          |
-
----
-
-- [نظرة عامة](#نظرة-عامة)
-- [مشروع المادة](#مشروع-المادة)
-- [نصائح للمادة](#نصائح-للمادة)
-- [مراجع المادة](#مراجع-للمادة)
-
-> اقتباس
-
-## [نظرة عامة](#نظرة-عامة)
-
-هذه المادة ستكون بدايتك في مجال قواعد البيانات ، ستتعلم فيها مبادئ قواعد البيانات مثل:
-
-1. ماهي البيانات و أنواعها
-2. ماهي الجداول و انواعها و العلاقات بين الجداول
-3. لغة \`SQL\` المستخدمة في قواعد البيانات
-4. الجبر
-
-## [مشروع المادة](#مشروع-المادة)
-
-المادة تحتوي على مشروع تنفذه مع مجموعة ، ويتكون من ثلاث مراحل (منفصلة عن بعض):
-
-1. تصميم نموذج قاعدة بيانات متكامل مع اوامر لغة \`SQL\` لبناءها
-2. [برنامج JDBC](https://github.com/DevMoath/jdbc) او \`Java Database Connectivity\` وهو عبارة عن برنامج بسيط بلغة جافا
-   تربطة بقاعدة بيانات وتنفذ من خلاله اوامر \`SQL\`
-3. كتابة أوامر \`SQL\` معقدة
-
-## [نصائح للمادة](#نصائح-للمادة)
-
-المادة تعتمد على الفهم بشكل كبير ولايوجد صعوبة كبيرة فيها وتعتبر مهمة لك كطالب نظم المعلومات سواء في مشروع التخرج او
-مابعد التخرج تحتاج فقط الاهتمام ومراجعة بسيطة
-
-## [مراجع المادة](#مراجع-للمادة)
-
-ومن المراجع الجيدة في يوتيوب قناة [الاستاذ محمد الدسوقي](https://www.youtube.com/user/DesoukiEgypt)
-
-رابط الدرايف للمادة
-[https://drive.google.com/drive/folders/14UkfdkH7FXbceYrCyQ8kTB2u0uCU7UfI](https://drive.google.com/drive/folders/14UkfdkH7FXbceYrCyQ8kTB2u0uCU7UfI)`;
 
 export default function Home() {
     const [markdown, setMarkdown] = useState('');
