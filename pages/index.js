@@ -140,7 +140,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="col-span-1 lg:col-span-5">
-                <div className="card bg-base-300 min-h-screen">
+                <div className="card bg-base-200 min-h-screen">
                     <div
                         className="prose text-right mx-5 lg:mx-auto my-10 break-words"
                         dangerouslySetInnerHTML={{ __html: markdown }}
