@@ -11,7 +11,7 @@ export default function NavBar() {
                 </Link>
             </div>
             <div className="flex-none">
-                <a href="https://twitter.com/Dev_Moath" className="btn btn-square btn-ghost">
+                <a href="https://twitter.com/intent/follow?screen_name=dev_moath" className="btn btn-square btn-ghost">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="w-8 h-8 text-blue-500"
