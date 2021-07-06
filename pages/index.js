@@ -3,6 +3,7 @@ import MarkdownIt from 'markdown-it';
 import prettier from 'prettier';
 import parserMarkdown from 'prettier/parser-markdown';
 import defaultValue from '@data/markdown';
+import Head from 'next/head';
 
 const parser = new MarkdownIt({
     html: false,
@@ -54,6 +55,10 @@ export default function Home() {
 
     return (
         <div className="grid grid-cols-1 lg:grid-cols-10 gap-4 min-h-screen">
+            <Head>
+                <title>RTL Markdown Editor</title>
+                <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport" />
+            </Head>
             <div className="col-span-1 lg:col-span-10">
                 <div className="my-5 flex flex-wrap justify-center gap-4">
                     <button className="btn" onClick={copyMarkdown}>
