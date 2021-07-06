@@ -15,9 +15,7 @@ export default function Home() {
     const [value, setValue] = useState(defaultValue);
     const textarea = useRef(null);
 
-    useEffect(() => {
-        setMarkdown(parser.render(value));
-    }, [value]);
+    useEffect(() => setMarkdown(parser.render(value)), [value]);
 
     return (
         <div className="grid grid-cols-1 lg:grid-cols-10 gap-4 min-h-screen">
