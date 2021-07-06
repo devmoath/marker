@@ -89,7 +89,7 @@ export default function Actions({ textarea, markdown, value, setValue }) {
                     <path d="M17 4a2 2 0 0 1 2 2v3a2 3 0 0 0 2 3a2 3 0 0 0 -2 3v3a2 2 0 0 1 -2 2" />
                 </svg>
             </button>
-            <button className="btn btn-secondary" onClick={() => setValue('')}>
+            <button className="btn btn-secondary" onClick={() => confirm('Are you sure ?') && setValue('')}>
                 clear
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
