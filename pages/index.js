@@ -27,7 +27,7 @@ export default function Home() {
                 <Actions textarea={textarea} markdown={markdown} value={value} setValue={setValue} />
             </div>
             <div className="col-span-1 lg:col-span-5 card rounded-none">
-                <div className="px-1">
+                <div className="p-1">
                     <div className="form-control">
                         <textarea
                             className="textarea h-screen textarea-bordered"
