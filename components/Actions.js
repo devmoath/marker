@@ -1,5 +1,6 @@
 import prettier from 'prettier';
 import parserMarkdown from 'prettier/parser-markdown';
+import copy from '@devmoath/copy-text';
 
 export default function Actions({ textarea, markdown, value, setValue }) {
     const copyMarkdown = () => {
@@ -12,12 +13,7 @@ export default function Actions({ textarea, markdown, value, setValue }) {
     };
 
     const copyHtml = () => {
-        const textField = document.createElement('textarea');
-        textField.innerText = markdown;
-        document.body.appendChild(textField);
-        textField.select();
-        document.execCommand('copy');
-        textField.remove();
+        copy(markdown);
 
         alert('Copied html text');
     };

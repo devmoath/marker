@@ -8,19 +8,20 @@
         "start": "next start"
     },
     "dependencies": {
+        "@devmoath/copy-text": "^0.0.1",
         "markdown-it": "^12.0.6",
         "next": "^11.0.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
     },
     "devDependencies": {
-        "prettier": "^2.3.1",
         "@devmoath/tailwindcss-typography-rtl": "^0.1.0",
         "@tailwindcss/typography": "^0.4.1",
         "autoprefixer": "^10.2.6",
         "daisyui": "^1.3.11",
         "node-ray": "^1.16.0",
         "postcss": "^8.3.5",
+        "prettier": "^2.3.1",
         "tailwindcss": "^2.2.4"
     },
     "prettier": {
