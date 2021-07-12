@@ -5,7 +5,7 @@ export default function NavBar() {
         <div className="navbar shadow-lg bg-base-200">
             <div className="flex-1">
                 <Link href="/">
-                    <a href="/" className="btn btn-ghost">
+                    <a className="btn btn-ghost">
                         <span className="text-lg font-bold">RTL Markdown Editor</span>
                     </a>
                 </Link>
