@@ -2,7 +2,7 @@ import prettier from 'prettier';
 import parserMarkdown from 'prettier/parser-markdown';
 import copy from '@devmoath/copy-text';
 
-export default function Actions({ textarea, markdown, value, setValue }) {
+export default function Actions({ textarea, html, markdown, setMarkdown }) {
     const copyMarkdown = () => {
         textarea.current.select();
         textarea.current.setSelectionRange(0, 99999);
@@ -13,13 +13,13 @@ export default function Actions({ textarea, markdown, value, setValue }) {
     };
 
     const copyHtml = () => {
-        copy(markdown);
+        copy(html);
 
         alert('Copied html text');
     };
 
     const format = () => {
-        const result = prettier.format(value, {
+        const formattedMarkdown = prettier.format(markdown, {
             parser: 'markdown',
             plugins: [parserMarkdown],
             printWidth: 120,
@@ -28,7 +28,13 @@ export default function Actions({ textarea, markdown, value, setValue }) {
             trailingComma: 'es5',
         });
 
-        setValue(result);
+        setMarkdown(formattedMarkdown);
+    };
+
+    const clear = () => {
+        if (confirm('Are you sure ?')) {
+            setMarkdown('');
+        }
     };
 
     return (
@@ -85,7 +91,7 @@ export default function Actions({ textarea, markdown, value, setValue }) {
                     <path d="M17 4a2 2 0 0 1 2 2v3a2 3 0 0 0 2 3a2 3 0 0 0 -2 3v3a2 2 0 0 1 -2 2" />
                 </svg>
             </button>
-            <button className="btn btn-secondary" onClick={() => confirm('Are you sure ?') && setValue('')}>
+            <button className="btn btn-secondary" onClick={clear}>
                 clear
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
