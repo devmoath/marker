@@ -1,20 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
-import MarkdownIt from 'markdown-it';
 import defaultValue from '@data/markdown';
 import Actions from '@components/Actions';
-
-const parser = new MarkdownIt({
-    html: false,
-    linkify: true,
-    typographer: true,
-});
+import marked from 'marked';
 
 export default function Home() {
     const [markdown, setMarkdown] = useState('');
     const [value, setValue] = useState(defaultValue);
     const textarea = useRef(null);
 
-    useEffect(() => setMarkdown(parser.render(value)), [value]);
+    useEffect(() => setMarkdown(marked(value)), [value]);
 
     return (
         <div className="grid grid-cols-1 lg:grid-cols-10 gap-4 min-h-screen">
