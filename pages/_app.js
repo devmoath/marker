@@ -29,15 +29,15 @@ export default function App({ Component, pageProps }) {
                 <meta name="title" content={title} />
                 <meta name="description" content={description} />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://rtl-markdown-editor.vercel.app/" />
+                <meta property="og:url" content={url} />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
-                <meta property="og:image" content="https://rtl-markdown-editor.vercel.app/favicon.svg" />
+                <meta property="og:image" content={`${url}/favicon.svg`} />
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://rtl-markdown-editor.vercel.app/" />
+                <meta property="twitter:url" content={url} />
                 <meta property="twitter:title" content={title} />
                 <meta property="twitter:description" content={description} />
-                <meta property="twitter:image" content="https://rtl-markdown-editor.vercel.app/favicon.svg" />
+                <meta property="twitter:image" content={`${url}/favicon.svg`} />
                 <meta content={title} itemProp="name" />
                 <meta name="apple-mobile-web-app-title" content={title} />
                 <meta name="application-name" content={title} />
