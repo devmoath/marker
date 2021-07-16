@@ -1,4 +1,4 @@
-export default `| وزن المادة | المتطلبات           |
+const markdown = `| وزن المادة | المتطلبات           |
 | ---------- | ------------------- |
 | 3 ساعات    | \`عال 111\` \`ريض 151\` |
 
@@ -41,3 +41,5 @@ export default `| وزن المادة | المتطلبات           |
 رابط الدرايف للمادة
 [https://drive.google.com/drive/folders/14UkfdkH7FXbceYrCyQ8kTB2u0uCU7UfI](https://drive.google.com/drive/folders/14UkfdkH7FXbceYrCyQ8kTB2u0uCU7UfI)
 `;
+
+export default markdown;
