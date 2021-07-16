@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
     return (
         <div>
             <Head>
-                <title>RTL Markdown Editor</title>
+                <title>{title}</title>
                 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport" />
                 <link href={url} hrefLang="ar" rel="alternate" />
                 <meta content={description} name="keywords" />
