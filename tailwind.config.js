@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
     mode: process.env.NODE_ENV ? 'jit' : undefined,
 
@@ -13,7 +15,16 @@ module.exports = {
         extend: {},
     },
 
-    plugins: [require('@tailwindcss/typography'), require('@devmoath/tailwindcss-typography-rtl'), require('daisyui')],
+    plugins: [
+        require('@tailwindcss/typography'),
+        require('@devmoath/tailwindcss-typography-rtl'),
+        require('daisyui'),
+        plugin(function ({ addBase }) {
+            addBase({
+                html: { direction: 'rtl', scrollBehavior: 'smooth' },
+            });
+        }),
+    ],
 
     daisyui: {
         themes: ['light', 'dark'],

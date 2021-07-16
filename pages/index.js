@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import MarkdownIt from 'markdown-it';
 import defaultValue from '@data/markdown';
-import Head from 'next/head';
 import Actions from '@components/Actions';
 
 const parser = new MarkdownIt({
@@ -19,10 +18,6 @@ export default function Home() {
 
     return (
         <div className="grid grid-cols-1 lg:grid-cols-10 gap-4 min-h-screen">
-            <Head>
-                <title>RTL Markdown Editor</title>
-                <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport" />
-            </Head>
             <div className="col-span-1 lg:col-span-10">
                 <Actions textarea={textarea} markdown={markdown} value={value} setValue={setValue} />
             </div>
