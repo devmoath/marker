@@ -1,8 +1,17 @@
 import prettier from 'prettier';
 import parserMarkdown from 'prettier/parser-markdown';
 import copy from '@devmoath/copy-text';
+import { MutableRefObject } from 'react';
 
-export default function Actions({ textarea, html, markdown, setMarkdown }) {
+interface ActionsProps {
+    textarea: MutableRefObject<HTMLTextAreaElement>;
+    html: string;
+    markdown: string;
+    setMarkdown: (value: string) => void;
+    setHTML: (value: string) => void;
+}
+
+export default function Actions({ textarea, html, markdown, setMarkdown, setHTML }: ActionsProps) {
     const copyMarkdown = () => {
         textarea.current.select();
         textarea.current.setSelectionRange(0, 99999);
@@ -34,6 +43,7 @@ export default function Actions({ textarea, html, markdown, setMarkdown }) {
     const clear = () => {
         if (confirm('Are you sure ?')) {
             setMarkdown('');
+            setHTML('');
         }
     };
 

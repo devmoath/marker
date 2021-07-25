@@ -1,6 +1,14 @@
 import { NextSeo } from 'next-seo';
 
-export default function SEO({ title = 'RTL Markdown Editor', description = 'Markdown Editor for RTL languages' }) {
+interface SEOProps {
+    title?: string;
+    description?: string;
+}
+
+export default function SEO({
+    title = 'RTL Markdown Editor',
+    description = 'Markdown Editor for RTL languages',
+}: SEOProps) {
     return (
         <NextSeo
             title={title}

@@ -6,7 +6,7 @@ import marked from 'marked';
 export default function Home() {
     const [html, setHTML] = useState('');
     const [markdown, setMarkdown] = useState('');
-    const textarea = useRef(null);
+    const textarea = useRef<HTMLTextAreaElement>(null);
 
     useEffect(() => {
         const markdownValue = localStorage.getItem('markdown-value') || defaultMarkdown;
@@ -25,7 +25,13 @@ export default function Home() {
     return (
         <div className="grid grid-cols-1 lg:grid-cols-10 gap-4 min-h-screen">
             <div className="col-span-1 lg:col-span-10">
-                <Actions textarea={textarea} html={html} markdown={markdown} setMarkdown={setMarkdown} />
+                <Actions
+                    textarea={textarea}
+                    html={html}
+                    markdown={markdown}
+                    setMarkdown={setMarkdown}
+                    setHTML={setHTML}
+                />
             </div>
             <div className="col-span-1 lg:col-span-5 card rounded-none">
                 <div className="p-1">
