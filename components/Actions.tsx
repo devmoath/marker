@@ -1,6 +1,6 @@
 import prettier from 'prettier';
 import parserMarkdown from 'prettier/parser-markdown';
-import copy from '@devmoath/copy-text';
+import { copy } from '@devmoath/copy-text';
 import { MutableRefObject } from 'react';
 
 interface ActionsProps {
