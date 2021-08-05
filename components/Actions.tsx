@@ -1,6 +1,6 @@
 import prettier from 'prettier';
 import parserMarkdown from 'prettier/parser-markdown';
-import { copy } from '@devmoath/copy-text';
+import copy from '@devmoath/copy-text';
 import { MutableRefObject } from 'react';
 
 interface ActionsProps {
@@ -13,10 +13,7 @@ interface ActionsProps {
 
 export default function Actions({ textarea, html, markdown, setMarkdown, setHTML }: ActionsProps) {
     const copyMarkdown = () => {
-        textarea.current.select();
-        textarea.current.setSelectionRange(0, 99999);
-
-        document.execCommand('copy');
+        copy(textarea.current.value);
 
         alert('Copied markdown text');
     };
@@ -44,6 +41,7 @@ export default function Actions({ textarea, html, markdown, setMarkdown, setHTML
         if (confirm('Are you sure ?')) {
             setMarkdown('');
             setHTML('');
+            localStorage.setItem('markdown-value', '');
         }
     };
 
