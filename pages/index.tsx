@@ -23,7 +23,7 @@ export default function Home() {
     };
 
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-10 gap-4 min-h-screen">
+        <div className="grid grid-cols-1 lg:grid-cols-10 gap-x-4 gap-y-8">
             <div className="col-span-1 lg:col-span-10">
                 <Actions
                     textarea={textarea}
@@ -33,25 +33,19 @@ export default function Home() {
                     setHTML={setHTML}
                 />
             </div>
-            <div className="col-span-1 lg:col-span-5 card rounded-none">
-                <div className="p-1">
-                    <div className="form-control">
-                        <textarea
-                            className="textarea h-screen textarea-bordered"
-                            onChange={handleMarkdownChanges}
-                            value={markdown}
-                            ref={textarea}
-                        />
-                    </div>
-                </div>
+            <div className="col-span-1 lg:col-span-5 min-h-[700px] max-h-[700px]">
+                <textarea
+                    className="bg-white h-full dark:bg-gray-800 dark:text-white block w-full rounded-lg border-gray-300 dark:border-white shadow-lg focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 leading-10"
+                    onChange={handleMarkdownChanges}
+                    value={markdown}
+                    ref={textarea}
+                />
             </div>
-            <div className="col-span-1 lg:col-span-5">
-                <div className="card bg-base-200 min-h-screen">
-                    <div
-                        className="prose lg:prose-lg mx-5 lg:mx-10 my-10 break-words"
-                        dangerouslySetInnerHTML={{ __html: html }}
-                    />
-                </div>
+            <div className="col-span-1 lg:col-span-5 min-h-[700px] max-h-[700px] rounded-lg shadow-lg bg-gray-50 dark:bg-gray-800 overflow-auto">
+                <div
+                    className="prose dark:prose-light lg:prose-lg mx-5 lg:mx-10 my-10 break-words max-w-none"
+                    dangerouslySetInnerHTML={{ __html: html }}
+                />
             </div>
         </div>
     );

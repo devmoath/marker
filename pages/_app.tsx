@@ -5,10 +5,10 @@ import type { AppProps } from 'next/app';
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
-        <div>
+        <div className="bg-white dark:bg-gray-700 pb-28 min-h-screen">
             <SEO />
             <NavBar />
-            <div className="mx-3 my-5">
+            <div className="container mt-10">
                 <Component {...pageProps} />
             </div>
         </div>
