@@ -5,7 +5,7 @@ module.exports = {
 
     purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
 
-    darkMode: false,
+    darkMode: 'media',
 
     theme: {
         extend: {},
@@ -16,17 +16,13 @@ module.exports = {
     },
 
     plugins: [
+        require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
         require('@devmoath/tailwindcss-typography-rtl'),
-        require('daisyui'),
         plugin(function ({ addBase }) {
             addBase({
                 html: { direction: 'rtl', scrollBehavior: 'smooth' },
             });
         }),
     ],
-
-    daisyui: {
-        themes: ['light', 'dark'],
-    },
 };
