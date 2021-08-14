@@ -23,7 +23,7 @@ export default function Home() {
     };
 
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-10 gap-x-4 gap-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-10 gap-x-4 gap-y-8 mx-3 md:mx-0">
             <div className="col-span-1 lg:col-span-10">
                 <Actions
                     textarea={textarea}

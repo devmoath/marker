@@ -86,7 +86,7 @@ export default function NavBar() {
                         <div className="px-2 pt-2 pb-3 space-y-1">
                             {navigation.map((item) => (
                                 <Link key={Math.random()} href={item.href}>
-                                    <a className="transition-colors duration-200 transform px-3 py-2 rounded-lg text-lg text-black dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-white">
+                                    <a className="flex justify-center transition-colors duration-200 transform px-3 py-2 rounded-lg text-lg text-black dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-white">
                                         {item.name}
                                     </a>
                                 </Link>
