@@ -63,7 +63,7 @@ export default function NavBar() {
                                 <div className="flex-shrink-0 flex items-center">
                                     <Link href="/">
                                         <a className="transition-colors duration-200 transform px-3 py-2 rounded-lg text-lg text-black dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700">
-                                            RTL Markdown Editor
+                                            Mark Editor
                                         </a>
                                     </Link>
                                 </div>

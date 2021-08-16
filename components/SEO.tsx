@@ -6,8 +6,8 @@ interface SEOProps {
 }
 
 export default function SEO({
-    title = 'RTL Markdown Editor',
-    description = 'Markdown Editor for RTL languages',
+    title = 'Mark Editor',
+    description = 'Simple Markdown Editor',
 }: SEOProps) {
     return (
         <NextSeo
