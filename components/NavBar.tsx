@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 import { DocumentTextIcon, PencilIcon } from '@heroicons/react/solid';
+import { usePreview } from '@contexts/preview';
 
 export default function NavBar() {
-    const [previewMode, setPreviewMode] = useState(false);
+    const { isPreviewMode, setPreviewMode } = usePreview();
 
     const navigation = [
         {
@@ -83,11 +84,11 @@ export default function NavBar() {
                                 </div>
                             </div>
                             <div className='absolute lg:hidden inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
-                                <button onClick={() => setPreviewMode(!previewMode)}
+                                <button onClick={() => setPreviewMode(!isPreviewMode)}
                                         className='transition-colors duration-200 transform px-3 py-2 rounded-lg text-lg text-black dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700'
                                 >
                                     {
-                                        previewMode ? <PencilIcon className='w-7 h-7' /> :
+                                        isPreviewMode ? <PencilIcon className='w-7 h-7' /> :
                                             <DocumentTextIcon className='w-7 h-7' />
                                     }
                                 </button>
