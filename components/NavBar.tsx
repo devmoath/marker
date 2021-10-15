@@ -48,7 +48,7 @@ export default function NavBar() {
     ];
 
     return (
-        <Disclosure as='nav' className='fixed bg-white dark:bg-gray-900 shadow-lg w-full'>
+        <Disclosure as='nav' className='fixed bg-white dark:bg-gray-900 shadow-lg w-full z-50'>
             {({ open }) => (
                 <Fragment>
                     <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
