@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
     const [isPreviewMode, setPreviewMode] = useState(false);
 
     return (
-        <div>
+        <div className="bg-white dark:bg-gray-700">
             <PreviewContext.Provider value={{ isPreviewMode, setPreviewMode }}>
                 <SEO />
                 <NavBar />
