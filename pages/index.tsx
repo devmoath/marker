@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import defaultMarkdown from '@data/markdown';
-import marked from 'marked';
+import { marked } from 'marked';
 import { usePreview } from '@contexts/preview';
 import classNames from 'classnames';
 
@@ -13,13 +13,13 @@ export default function Home() {
     useEffect(() => {
         const markdownValue = localStorage.getItem('markdown-value') || defaultMarkdown;
         setMarkdown(markdownValue);
-        setHTML(marked(markdownValue));
+        setHTML(marked.parse(markdownValue));
     }, []);
 
     const handleMarkdownChanges = (e) => {
         setMarkdown(e.target.value);
 
-        setHTML(marked(e.target.value));
+        setHTML(marked.parse(e.target.value));
 
         localStorage.setItem('markdown-value', e.target.value);
     };
