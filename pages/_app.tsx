@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
     return (
         <div className="bg-white dark:bg-gray-700">
-            <Script defer data-domain="marker.moath.dev" src="/js/script.js" />
+            <Script defer data-domain="moath.dev" src="/js/script.js" />
             <PreviewContext.Provider value={{ isPreviewMode, setPreviewMode }}>
                 <SEO />
                 <NavBar />
