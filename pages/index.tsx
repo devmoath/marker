@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import defaultMarkdown from '@data/markdown';
-// @ts-ignore
 import { marked } from 'marked';
 import { usePreview } from '@contexts/preview';
 import classNames from 'classnames';
