@@ -25,23 +25,30 @@ export default function Home() {
     };
 
     return (
-        <div className='grid grid-cols-1 lg:grid-cols-2'>
-            <div className={classNames('col-span-1 lg:block', {
-                'hidden': isPreviewMode,
-            })}>
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div
+                className={classNames('col-span-1 lg:block', {
+                    hidden: isPreviewMode,
+                })}
+            >
                 <textarea
-                    className='bg-white min-h-screen dark:bg-gray-800 dark:text-white block w-full leading-10 border-0'
+                    className="block min-h-screen w-full border-0 bg-white leading-10 dark:bg-gray-800 dark:text-white"
                     onChange={handleMarkdownChanges}
                     value={markdown}
                     ref={textarea}
                 />
             </div>
-            <div className={classNames('lg:block col-span-1 max-h-screen shadow-lg bg-gray-50 dark:bg-gray-800 overflow-auto lg:border-r-2', {
-                'block': isPreviewMode,
-                'hidden': !isPreviewMode,
-            })}>
+            <div
+                className={classNames(
+                    'col-span-1 max-h-screen overflow-auto bg-gray-50 shadow-lg dark:bg-gray-800 lg:block lg:border-r-2',
+                    {
+                        block: isPreviewMode,
+                        hidden: !isPreviewMode,
+                    }
+                )}
+            >
                 <div
-                    className='prose dark:prose-light lg:prose-lg mx-5 lg:mx-10 my-10 break-words max-w-none'
+                    className="prose mx-5 my-10 max-w-none break-words dark:prose-light lg:prose-lg lg:mx-10"
                     dangerouslySetInnerHTML={{ __html: html }}
                 />
             </div>

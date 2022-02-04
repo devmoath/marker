@@ -1,8 +1,8 @@
 import { createContext, useContext } from 'react';
 
 export interface PreviewInterface {
-    isPreviewMode: boolean,
-    setPreviewMode: (value: boolean) => void
+    isPreviewMode: boolean;
+    setPreviewMode: (value: boolean) => void;
 }
 
 export const PreviewContext = createContext<PreviewInterface>(undefined);
