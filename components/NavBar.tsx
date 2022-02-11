@@ -54,7 +54,7 @@ export default function NavBar() {
                     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                         <div className="container relative flex h-16 items-center justify-between">
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                                <Disclosure.Button className="focus:outline-none inline-flex transform items-center justify-center rounded-lg p-2 text-black transition-colors duration-200 hover:bg-gray-300 focus:ring-2 focus:ring-inset focus:ring-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                <Disclosure.Button className="inline-flex transform items-center justify-center rounded-lg p-2 text-black transition-colors duration-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
                                     <span className="sr-only">Open main menu</span>
                                     {open ? (
                                         <XIcon className="block h-6 w-6" aria-hidden="true" />
