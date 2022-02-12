@@ -15,7 +15,7 @@ export default function SEO({
             description={description}
             canonical={process.env.NEXT_PUBLIC_BASE_URL}
             openGraph={{
-                images: [{ url: `${process.env.NEXT_PUBLIC_BASE_URL}/favicon.svg` }],
+                images: [{ url: `${process.env.NEXT_PUBLIC_BASE_URL}/dark-mode.png` }],
                 site_name: title,
                 locale: 'ar-SA',
                 type: 'website',
