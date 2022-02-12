@@ -33,7 +33,7 @@ export default function Home() {
                 })}
             >
                 <textarea
-                    className="block min-h-screen w-full border-0 bg-white pt-[5rem] leading-10 dark:bg-gray-800 dark:text-white"
+                    className="my-[64px] mx-0 block h-screen w-full resize-none border-0 bg-white py-0 leading-10 dark:bg-gray-800 dark:text-white lg:my-0 lg:pt-[64px]"
                     onChange={handleMarkdownChanges}
                     value={markdown}
                     ref={textarea}
@@ -41,7 +41,7 @@ export default function Home() {
             </div>
             <div
                 className={classNames(
-                    'col-span-1 max-h-screen overflow-auto border-r-gray-500 bg-gray-50 dark:bg-gray-800 lg:block lg:border-r-2',
+                    'col-span-1 h-screen overflow-auto border-r-gray-500 bg-gray-50 dark:bg-gray-800 lg:block lg:border-r-2',
                     {
                         block: isPreviewMode,
                         hidden: !isPreviewMode,
@@ -49,7 +49,7 @@ export default function Home() {
                 )}
             >
                 <div
-                    className="prose mx-5 my-10 max-w-none break-words pt-[4.5rem] dark:prose-invert lg:prose-lg lg:mx-10"
+                    className="prose mx-8 max-w-none break-words pt-[90px] dark:prose-invert lg:prose-lg lg:mx-10"
                     dangerouslySetInnerHTML={{ __html: html }}
                 />
             </div>

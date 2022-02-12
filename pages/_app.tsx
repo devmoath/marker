@@ -18,7 +18,9 @@ export default function App({ Component, pageProps }: AppProps) {
             <PreviewContext.Provider value={{ isPreviewMode, setPreviewMode }}>
                 <SEO />
                 <NavBar />
-                <Component {...pageProps} />
+                <div className="h-screen">
+                    <Component {...pageProps} />
+                </div>
             </PreviewContext.Provider>
         </div>
     );
