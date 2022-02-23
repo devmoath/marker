@@ -1,4 +1,4 @@
-# Marker
+# Marker ![GitHub deployments](https://img.shields.io/github/deployments/devmoath/marker/production?label=vercel&logo=vercel&logoColor=vercel&style=for-the-badge)
 
 Markdown editor for RTL language.
 
